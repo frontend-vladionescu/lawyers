@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avocati Oficiu</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" hreffavicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+    <link rel="stylesheet" type="text/css" href="CSS/mainPage.css" />
+    <script type="text/javascript" src="JS/storeInLocalStorage.js"></script>
+  </head>
+
+  <body>
+    <div class="loginFormDiv">
+      <form id="loginForm" >
+        <p>USERNAME</p>
+        <select id="select" class="selectUser">
+        <option value="Sectia 1">Sectia 1 Politie</option>
+        <option value="Sectia 2">Sectia 2 Politie</option>
+        <option value="Sectia 3">Sectia 3 Politie</option>
+        <option value="Sectia 4">Sectia 4 Politie</option>
+        <option value="Sectia 5">Sectia 5 Politie</option>
+        <option value="Sectia 6">Sectia 6 Politie</option>
+        <option value="Sectia 7">Sectia 7 Politie</option>
+        <option value="Biroul de Investigatii Criminale">Biroul de Investigatii Criminale</option>
+        <option value="Biroul de Politie pentru Centrul Universitar">Biroul de Politie pentru Centrul Universitar</option>
+        <option value="Biroul Rutier">Biroul Rutier</option>
+        <option value="Sectia 2 Politie Rurala Apahida">Sectia 2 Politie Rurala Apahida</option>
+        <option value="Sectia 3 Politie Rurala Baciu">Sectia 3 Politie Rurala Baciu</option>
+        <option value="Sectia 6 Politie Rurala Floresti">Sectia 6 Politie Rurala Floresti</option>
+        <option value="DNA">DNA</option>
+        <option value="SAJ">SAJ</option>
+        <option value="DIICOT">DIICOT</option>
+        </select>
+        <p>PAROLA</p>
+        <input type="password" name="password" placeholder="parola" class="inputField">  
+        <div class="error" id="error">ati introdus o parola gresita</div>
+        <input type="submit" value="Submit" id="submits" class="submitButttonHidden">
+      </form>
+    </div>
+    <div id="loginMessage" class="loginMessage">
+      <p> Va rugam sa va logati folosind numele sectiei de politie din care faceti parte dupa care introduceti parola aferenta si apasati tasta ENTER. <br> In situatia in care faceti parte din Serviciul de asistenta juridica va rugam sa va logati cu numele SAJ</p>
+    </div>
+    <script type="text/javascript" src="JS/mainPage.js"></script>
+   
+  </body>
+</html>

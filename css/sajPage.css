@@ -1,0 +1,139 @@
+.actionButton{
+  bottom:10px;
+  position: absolute;
+}
+
+.addEditSuspendDeleteDiv{
+  border-radius:20px;
+  margin:0 auto;
+  margin-top:20%;
+  opacity: 1;
+  padding:20px;
+  width:25%;
+  z-index:101;
+}
+
+.addLawyerButton{
+  border-radius:5px;
+}
+
+.addLawyerForm{
+  background-color:#99ccff;
+}
+
+body{
+  border:0;
+  margin:0;
+  padding:0;
+}
+
+button, input{
+  border-radius:5px;
+  margin:5px;
+}
+
+.color1{
+  background-color: #cccccc;
+}
+
+.color2{
+  background-color:grey;
+}
+
+.confirmButtons{
+  position:relative;
+}
+
+.currentList{
+  background-color: #F5F5DC;
+  border-radius: 20px;
+  -webkit-box-shadow: 18px 17px 5px -6px rgba(186,175,130,1);
+  -moz-box-shadow: 18px 17px 5px -6px rgba(186,175,130,1);
+  box-shadow: 18px 17px 5px -6px rgba(186,175,130,1);
+  margin:0 auto;
+  width:50%;
+}
+
+.dateElement{
+  border-top-right-radius: 20px;
+  padding:5px;
+}
+
+.deleteAlert{
+  background-color:red;
+}
+
+.editLawyerForm{
+  background-color:#33cc00;
+}
+
+.hidden{
+  display:none;
+}
+
+.lawyerElement{
+  border-top-right-radius: 20px;
+  height:40px;
+  padding:5px;
+}
+
+.listNumber{
+  background-color:#F5F5DC;
+  border-radius:20px;
+  box-shadow: 18px 17px 5px -6px rgba(186,175,130,1);
+  -webkit-box-shadow: 18px 17px 5px -6px rgba(186,175,130,1);
+  -moz-box-shadow: 18px 17px 5px -6px rgba(186,175,130,1);
+  height:40px;
+  margin:5% auto;
+  padding-top:20px;
+  text-align:center;
+  width:50%;
+}
+
+.listNumberLink:hover{
+  cursor:pointer;
+  font-size:30px;
+}
+
+.navThroughLists{
+  border:0;
+  font-size:20px;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+  width:25%;
+}
+
+.no{
+  right:15%;
+}
+
+.outside{
+  background-color:rgba(128,128,128, 0.7);
+  height:100%;
+  margin:0 auto;
+  position:absolute;
+  text-align:center;
+  top:0;
+  width:100%;
+  z-index:100;
+}
+
+.sideButtons{
+  float:right;
+  border-radius:5px;
+}
+
+.suspendAlert{
+  background-color:yellow;
+}
+
+.suspendedLawyer{
+  background-color: yellow;
+  border-top-right-radius: 20px;
+  padding:5px;
+}
+
+.yes{
+  left:15%;
+}

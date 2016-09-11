@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../CSS/sajPage.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" hreffavicon-16x16.png">
+    <link rel="manifest" href="../favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://use.fontawesome.com/fd48476c0e.js"></script>
+  </head>
+
+  <body>
+  
+    <div id="addLawyer" class="hidden">
+      <form id="addLawyerForm">
+        Adaugati un avocat nou
+        <br>
+        <br>
+        Nume:         
+        <input type="text" name="name" id = "name"><br> 
+        Numar telefon:
+        <input type="text" name="phonenumber" id = "phone"><br> 
+        <input type="radio" name="sex" id="inputM">M
+        <input type="radio" name="sex" id="inputF">F<br>
+        <div id="error"></div>
+        <input type="submit" value="Adauga" id="submits">
+      </form>
+    </div>
+    
+    <div id="editLawyer" class="hidden">
+      <form id="editLawyerForm">
+        Editati informatiile
+        <br>
+        <br>
+        Nume:         
+        <input type="text" name="name" id = "editName"><br> 
+        Numar telefon:
+        <input type="text" name="phonenumber" id = "editPhone"><br> 
+        <input type="radio" name="sex" id="inputEditM">M
+        <input type="radio" name="sex" id="inputEditF">F<br>
+        <div id="errorEdit"></div>
+        <br>
+        <br>
+        <br>
+        <div class="confirmButtons">
+         <button id="editLawyerButtonYes" class="yes actionButton"> modifica</button>
+         <button id="editLawyerButtonYes" class="no actionButton"> anuleaza</button>
+        </div>
+      </form>
+    </div>
+    
+    <div id="deleteLawyer" class="hidden">
+      <div id="deleteAlert"><p>Sunteti sigur ca doriti stergerea avocatului</p> <p id="deleteLawyerName"></p><br><br><div id="confirmButtons" class="confirmButtons"><button id="yesDelete" class="yes actionButton">Da</button><button id="noDelete" class="no actionButton">Nu</button></div></div>
+    </div>
+    
+     <div id="suspendLawyer" class="hidden">
+      <div id="suspendAlert"><p>Avocatul selectat a fost suspendat. Pe perioada suspendarii acesta nu va putea fi contactat de politie. Pentru a putea fi mai vizibil, pe aceasta perioada segmentul dedicat avocatului va avea culoarea galbena.<br> In situatia in care ati dispus suspendarea din greseala sau a incetat motivul care a atras suspendarea va rugam sa apasat pe butonul "anuleaza suspendarea"<br><button id="ok">Am inteles</button></p></div>
+     </div>
+
+    <div id="listNumber" class="listNumber"> Lista 1</div>  
+    <div id="lista1"></div>
+    <div id="lista2"></div>
+    <div id="lista3"></div>
+    <div id="lista4"></div>
+    <div id="lista5"></div>
+    <div id="lista6"></div>
+    <div id="lista7"></div>
+    <div id="lista8"></div>
+    
+    <div class="navThroughLists">
+      <p><a id="1" class="listNumberLink">1</a><a id="2" class="listNumberLink"> 2 </a><a id="3" class="listNumberLink" > 3</a><a id="4" class="listNumberLink"> 4 </a><a id="5"class="listNumberLink"> 5 </a><a id="6" class="listNumberLink"> 6</a><a id="7" class="listNumberLink"> 7</a><a id="8" class="listNumberLink"> 8</a></p>
+      <p><button id="addNewLawyerButton" class="addLawyerButton">Adaugati un avocat</button></p>
+    </div>
+    
+    <script type="text/javascript" src="../JS/sajPage.js"></script>
+    
+  </body>
+</html>
