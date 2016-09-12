@@ -30,8 +30,8 @@ var listaStagiari = [{nume: "Figma Ion", telefon:"0711111111", numarOficii: 0, s
   
   
 listaStagiari.sort(sortLawyerList); 
-addListNumber();
-addSuspendValue();
+
+
 
 var matrixForDates = dateMatrixGenerator();
 
@@ -46,15 +46,15 @@ function sortLawyerList(a, b){
 } 
 
 
-function addSuspendValue(){
+(function addSuspendValue(){
   for(var x=0 ;x <listaStagiari.length; x++)
   {
     listaStagiari[x].suspendat = false;
   }
-}
+}());
 
 
-function addListNumber(){
+(function addListNumber(){
   var elementsInList = Math.floor(listaStagiari.length/8);
   var extraElementsInList = listaStagiari.length%8;
 
@@ -75,7 +75,7 @@ function addListNumber(){
       counterList--;
     }
   }
-}
+}());
 
 
 function dateMatrixGenerator(){

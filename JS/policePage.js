@@ -1,6 +1,5 @@
 var listOfLawyers  = JSON.parse( localStorage.getItem( 'itemsArray' ) );
 var dateMatrix  = JSON.parse( localStorage.getItem( 'dates' ) );
-var lawyerList = listOfLawyers.filter(function(element){if(element.suspendat == false) return element;});
 var currentListNumber = findCurrentList();
 var currentListOfLawyers = listOfLawyers.filter(function(element){return element.lista == currentListNumber});
 var lawyerList = currentListOfLawyers.filter(function(element){if(element.suspendat == false) return element;});
@@ -18,7 +17,7 @@ for(var x = 0; x < dateMatrix.length; x++){
   { var thisDate = new Date(dateMatrix[x][y])
     var thisDay = thisDate.getDate();
     var thisMonth = thisDate.getMonth()+1;
-    if(thisMonth == todayMonth && todayDay >= thisDay && todayDay <thisDay+7){
+    if(thisMonth == todayMonth && todayDay >= thisDay && todayDay < thisDay+7){
       currentListReturn= x+1;
     }
   }

@@ -3,26 +3,6 @@ var dateMatrix = JSON.parse( localStorage.getItem( 'dates' ) );
 var currentListLink  = 1;
 lawyerList.sort(sortLawyerList); 
 generateLists();
-generateLinks();
-
-
-document.getElementById("addNewLawyerButton").onclick = function(){
-  var addLawyerDiv = document.getElementById("addLawyer");
-  addLawyerDiv.className = "outside";
-  document.getElementById("addLawyerForm").className = "addLawyerForm";
-  document.getElementById("addLawyerForm").className += " addEditSuspendDeleteDiv";
-  
-  addLawyerDiv.onclick = function(){
-    this.className = "hidden";
-    document.getElementById("addLawyerForm").className = "hidden";
-  }
-  
-  document.getElementById("addLawyerForm").onclick = function (e){
-    e.stopPropagation();
-  } 
-} 
-
-
 
 function generateLists(){
   for(var x =1 ; x<=8; x++){
@@ -62,7 +42,7 @@ function generateLists(){
     var listDateElement = listDateElementGenerate(currentListDates);
     currentOlLawyerList.appendChild(listDateElement);
   }
-}
+};
 
 function listDateElementGenerate(array){
   var element = document.createElement("div");
@@ -175,6 +155,22 @@ function createLawyerLi(nr, x){
   return currentLawyer;
 }
 
+
+document.getElementById("addNewLawyerButton").onclick = function(){
+  var addLawyerDiv = document.getElementById("addLawyer");
+  addLawyerDiv.className = "outside";
+  document.getElementById("addLawyerForm").className = "addLawyerForm";
+  document.getElementById("addLawyerForm").className += " addEditSuspendDeleteDiv";
+  
+  addLawyerDiv.onclick = function(){
+    this.className = "hidden";
+  }
+  
+  document.getElementById("addLawyerForm").onclick = function (e){
+    e.stopPropagation();
+  } 
+} 
+
 function myHandlerEdit(clickedLi, buttonEditClicked){
   document.getElementById("editLawyer").className = "outside";
   document.getElementById("editLawyerForm").className = "addEditSuspendDeleteDiv";
@@ -211,7 +207,7 @@ function myHandlerEdit(clickedLi, buttonEditClicked){
     document.getElementById("editLawyer").className = "hidden";
   }
   document.getElementById("editLawyerButtonNo").onclick = function (){
-    document.getElementById("editLawyer").className = "hidden";
+  document.getElementById("editLawyer").className = "hidden";
   }
 
 }
@@ -271,12 +267,16 @@ function myHandlerSuspend(clickedLi, buttonSuspendClicked){
     return;
   }
   if(buttonSuspendClicked.firstChild.nodeValue == "anuleaza suspendarea"){
-    if(clickedLi.number%2 == 0)
-    clickedLi.className = "color2";
-    clickedLi.className += " lawyerElement";
+    clickedLi.className = " lawyerElement";
+    if(clickedLi.number%2 == 0){
+      clickedLi.className += " color2";
+    }else{
+      clickedLi.className += " color1";
+    }
     buttonSuspendClicked.innerHTML = "";
     buttonSuspendClicked.appendChild(suspendText);
     lawyerList[clickedLi.number].suspendat = false;
+    localStorage.setItem('itemsArray',JSON.stringify(lawyerList));
     return;
   }
 }
@@ -284,7 +284,7 @@ function myHandlerSuspend(clickedLi, buttonSuspendClicked){
 function myHandlerEdit(clickedLi, buttonEditClicked){
   document.getElementById("editLawyer").className = "outside";
   document.getElementById("editLawyerForm").className = "addEditSuspendDeleteDiv";
-  document.getElementById("editLawyerForm").className += " addLawyerForm";
+  document.getElementById("editLawyerForm").className += " editLawyerForm";
   document.getElementById("editName").placeholder = lawyerList[clickedLi.number].nume;
   document.getElementById("editPhone").placeholder = lawyerList[clickedLi.number].telefon;
   
@@ -388,18 +388,18 @@ var nextDateReturn = 0;
       break;
     }
     if(thisMonth-1 == todayMonth){
-      nextDateRetunr =y;
+      nextDateReturn =y;
       break;
     }
     if(thisMonth-2 == todayMonth){
-      nextDateRetunr =y;
+      nextDateReturn =y;
       break;
     }
   }
   return dateMatrix[currentList].slice(y, dateMatrix[currentList].length);
 }
 
-function generateLinks(){
+(function generateLinks(){
   document.getElementById("lista1").className = "currentList";
 
   for(var i=1; i<=8; i++){
@@ -409,7 +409,7 @@ function generateLinks(){
       myHandlerSurf.bind(this)(this.number);
     }
   }
-}
+}());
 
 function myHandlerSurf(clickedNumber){
   if(clickedNumber == currentListLink){

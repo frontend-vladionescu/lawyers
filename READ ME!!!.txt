@@ -4,7 +4,7 @@ sau ca politist pentru a solicita un avocat din oficiu.
 Site-ul imparte dinamic avocatii existenti creati manual de catre mine in 8 liste si le genereaza datele in care acestia pot fi contactati in mod dinamic
 Listele sunt active dupa urmatorul sistem, fiecare lista este o activa o saptamana in mod ciclic. Astfel lista 1 va fi activa din 1-8 ianuarie, lista 2 din 8-15 ianuarie etc.
 Lista 1 va fi din nou activa in 26 februarie si tot asa.
-Pagina afla data in  care ne aflam pentru a putea oferii politistilor lista corecta aferenta datei noastre.
+Pagina afla data in care ne aflam pentru a putea oferii politistilor lista corecta aferenta datei noastre.
 
 parola pentru oricare din logari este 1234
 
