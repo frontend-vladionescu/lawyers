@@ -34,6 +34,7 @@ listaStagiari.sort(sortLawyerList);
 
 
 var matrixForDates = dateMatrixGenerator();
+console.log(matrixForDates)
 
 function sortLawyerList(a, b){
   var nameA = a.nume.toLowerCase(), nameB = b.nume.toLowerCase()

@@ -1,28 +1,28 @@
 var listOfLawyers  = JSON.parse( localStorage.getItem( 'itemsArray' ) );
+
 var dateMatrix  = JSON.parse( localStorage.getItem( 'dates' ) );
+console.log(dateMatrix);
 var currentListNumber = findCurrentList();
+
 var currentListOfLawyers = listOfLawyers.filter(function(element){return element.lista == currentListNumber});
 var lawyerList = currentListOfLawyers.filter(function(element){if(element.suspendat == false) return element;});
 
 
 function findCurrentList()
 {
-var today = new Date();
-var todayMonth = today.getMonth()+1;
-var todayDay  = today.getDate();
-var currentListRerurn = 0;
-
-for(var x = 0; x < dateMatrix.length; x++){
-  for(var y = 0; y < dateMatrix[x].length; y++)
-  { var thisDate = new Date(dateMatrix[x][y])
-    var thisDay = thisDate.getDate();
-    var thisMonth = thisDate.getMonth()+1;
-    if(thisMonth == todayMonth && todayDay >= thisDay && todayDay < thisDay+7){
-      currentListReturn= x+1;
+  var today = new Date();
+  var currentListReturn = 0;
+  for(var x = 0; x < dateMatrix.length; x++){
+    for(var y = 0; y < dateMatrix[x].length; y++){ 
+      var startDate = new Date(dateMatrix[x][y])
+      var endDate = new Date(startDate)
+      endDate.setDate(endDate.getDate() + 7);
+      if(today.getTime()>= startDate.getTime() && today.getTime() <= endDate.getTime()){
+        currentListReturn= x+1;   
+      }
     }
   }
-}
-return currentListReturn;
+  return currentListReturn;
 }
 
 document.getElementById("stagiar").onclick = function(){
@@ -30,12 +30,15 @@ document.getElementById("stagiar").onclick = function(){
   var lawyerName; 
   var lawyerPhonenumber;
   var minOficii;
+ 
   findNextLawyer(lawyerList);
+  
   incrementLawyerOficiiNumber();
   displayLawyer();
 }
 
 function findNextLawyer(array){
+  
   if(document.getElementById("inputM").checked){
     var maleLawyers = array.filter( function(element){return element.sex == "M"})
     lawyerName = maleLawyers[0].nume;
